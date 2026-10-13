@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: studyfund-dapp
+    runtime: python
+    plan: free
+    buildCommand: python -m zipfile -e StudyFund_Submission.zip . && pip install -r StudyFund/requirements.txt
+    startCommand: gunicorn --chdir StudyFund app:app --bind 0.0.0.0:$PORT --workers 2 --threads 4 --timeout 120
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.11
+      - key: CHAIN_ID
+        value: "11155111"
+      - key: ENABLE_DEPLOY_UI
+        value: "true"
