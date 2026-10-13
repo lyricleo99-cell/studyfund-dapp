@@ -4,6 +4,12 @@ Full source code, Solidity contract and ABI, Flask backend, HTML/CSS/JavaScript,
 
 The archive contains a single `StudyFund/` directory. Download and extract it to inspect or run the project. The included README and DEPLOYMENT guide cover local setup and Sepolia wallet deployment.
 
+## Live website
+
+https://studyfund-dapp.onrender.com
+
+Web hosting is verified live. Wallet deployment helper: https://studyfund-dapp.onrender.com/deploy . Sepolia contract configuration is still required before savings transactions can be used.
+
 ## Render deployment
 
 Runtime: Python. Free web service.
